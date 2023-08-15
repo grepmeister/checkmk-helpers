@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# pretty print python data structures either from stdin or as file parameter
+cat "${1:-/dev/stdin}" | python3 -c 'import sys, pprint; pprint.pprint(eval(sys.stdin.read()), indent=4)'

@@ -1,0 +1,35 @@
+= Some simple REST API curl scripts
+
+* Ansible is still to overhelming for me, therefore I still use simple curl REST API calls and filter them with jq.
+* I extend my $PATH to point to the script folder so I can use it on my local sites and in vagrant boxes.
+* This is still WIP.
+
+== idea 
+
+They have to be run as site user because:
+
+* they grab the secret from ~/var/check_mk/web/automation/automation.secret
+* they grab the apache port, site name from ~/etc/omd/site.conf
+
+== scripts
+
+== rest-api-activate-changes.sh
+
+* activate changes of current site
+
+== rest-api-create-folder.sh
+
+* create a folder <site> in main folder of <site> with no-ip and no-piggyback
+* used for licensing testing
+
+== rest-api-get-all-folder.sh
+
+* show all folders with two possible options: path and recursive
+
+== rest-api-get-all-hosts.sh
+
+* show simple list of hosts of site, faster than cmk --list-hosts
+* plain text output instead of json
+
+
+....
