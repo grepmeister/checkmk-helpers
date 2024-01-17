@@ -10,7 +10,7 @@ then
 fi
 
 # secret
-read secret < ~/var/check_mk/web/automation/automation.secret
+read -r secret < ~/var/check_mk/web/automation/automation.secret
 
 # ip & port
 source ~/etc/omd/site.conf

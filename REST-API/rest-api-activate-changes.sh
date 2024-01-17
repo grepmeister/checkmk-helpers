@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# 2023-05-08 Jodok Ole Glabasna <jodok.glabasna@checkmk.com>
+# 2024-01-17 Grepmeister <grepmeister@stippmilch.de>
 
 # to be run as site user
 
 # secret
-read secret < ~/var/check_mk/web/automation/automation.secret
+read -r secret < ~/var/check_mk/web/automation/automation.secret
 
 # ip & port
 source ~/etc/omd/site.conf
@@ -14,9 +14,10 @@ source ~/etc/omd/site.conf
 curl -X 'POST' \
 	--silent \
 	"http://${CONFIG_APACHE_TCP_ADDR}:${CONFIG_APACHE_TCP_PORT}/${OMD_SITE}/check_mk/api/1.0/domain-types/activation_run/actions/activate-changes/invoke" \
-	--header 'accept: application/json' \
+	--header 'Accept: application/json' \
 	--header "Authorization: Bearer automation $secret" \
 	--header 'Content-Type: application/json' \
+	--header 'If-Match: *' \
 	--data '{
 		"redirect": false,
 		"sites": [

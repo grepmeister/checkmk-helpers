@@ -30,6 +30,3 @@ They have to be run as site user because:
 
 * show simple list of hosts of site, faster than cmk --list-hosts
 * plain text output instead of json
-
-
-....

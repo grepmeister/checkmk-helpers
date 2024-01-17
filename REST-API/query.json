@@ -1,0 +1,5 @@
+{
+  "op": "=",
+  "left": "host_name",
+  "right": "some.host.tld"
+}

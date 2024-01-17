@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# 2023-05-08 Jodok Ole Glabasna <jodok.glabasna@checkmk.com>
+# 2024-01-17 Grepmeister <grepmeister@stippmilch.de>
 
 # secret
-read secret < ~/var/check_mk/web/automation/automation.secret
+read -r secret < ~/var/check_mk/web/automation/automation.secret
 
 # ip & port
 source ~/etc/omd/site.conf
