@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# 2024-01-17 Grepmeister <grepmeister@stippmilch.de>
+# 2024-06-19 Grepmeister <grepmeister@stippmilch.de>
 
 # Show all sub-folders of this folder. The default is the root-folder.
 parent=${1:-/}

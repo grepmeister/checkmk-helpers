@@ -1,5 +1,5 @@
 {
   "op": "=",
   "left": "host_name",
-  "right": "some.host.tld"
+  "right": "myhost.mycompany.tld"
 }

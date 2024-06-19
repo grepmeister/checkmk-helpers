@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 2024-01-17 Grepmeister <grepmeister@stippmilch.de>
+# 2024-06-19 Grepmeister <grepmeister@stippmilch.de>
 
 # if you need the attributes from folder inheritance as well
 effective_attributes=${1:-False}

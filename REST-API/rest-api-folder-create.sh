@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# 2024-01-17 Grepmeister <grepmeister@stippmilch.de>
+# 2024-06-19 Grepmeister <grepmeister@stippmilch.de>
 
 # secret
 read -r secret < ~/var/check_mk/web/automation/automation.secret
