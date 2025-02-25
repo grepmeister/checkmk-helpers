@@ -6,13 +6,13 @@ import requests
 json_string = '''
 [
   {
-    "name":"device-01",
+    "name":"ucs-device-01",
     "serial":"12345",
     "model":"UCSX-210C",
     "status":"healthy"
   },
   {
-    "name":"device-02",
+    "name":"ucs-device-02",
     "serial":"56789",
     "model":"UCSX-210C",
     "status":"degraded"
@@ -26,7 +26,7 @@ data = json.loads(json_string)
 
 # my own status
 print("<<<local>>>")
-print("0 \"API query\" -  some details\n")
+print("0 \"API query\" -  some details")
 
 # now let's inject some check results for other hosts
 for item in data:
@@ -37,5 +37,5 @@ for item in data:
     state = 0 if item['status'] == "healthy" else 2
 
     # https://docs.checkmk.com/latest/en/localchecks.html
-    print(f"{state} \"UCS {item['name']} health\" - {item['name']} {item['model']} {item['serial']} {item['status']}")
-    print("<<<<>>>>\n")
+    print(f"{state} \"UCS system health\" - {item['name']} {item['model']} {item['serial']} {item['status']}")
+    print("<<<<>>>>")
